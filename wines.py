@@ -220,7 +220,7 @@ import os
 if int(accuracy) > 80:
   os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=success')
 else:
-os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=failure')
+  os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=failure')
 
 
 
