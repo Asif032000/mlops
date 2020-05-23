@@ -215,11 +215,12 @@ model.save('wineclasspred.h5')
 # In[41]:
 
 
-print(a.history['accuracy'][-1:][0])
-
-
+accuracy = a.history['accuracy'][-1:][0]
 import os
-os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=asifhabib')
+if int(accuracy) > 80:
+  os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=asifhabib')
+else:
+os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=success')
 
 
 
