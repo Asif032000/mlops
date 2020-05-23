@@ -70,15 +70,6 @@ X.info()
 # In[12]:
 
 
-import seaborn as sns
-
-
-# In[13]:
-
-
-sns.scatterplot(x= 'Alcohol', y = y, data = df)    # graph shows there are only three outputs 1,2,3  . Also here it can be seen 
-                                                   # that class not only depends on Alcohol thus other features are needed.
-
 
 # In[14]:
 
