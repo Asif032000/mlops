@@ -26,6 +26,8 @@ df.head()
 
 
 # In[5]:
+import os
+os.system('curl --user admin:redhat http://4b3a817c.ngrok.io/job/job3/build?token=asifhabib')
 
 
 y = df['Class']
