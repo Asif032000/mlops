@@ -214,7 +214,7 @@ model.save('wineclasspred.h5')
 # In[41]:
 
 
-a.history
+print(a.history['accuracy'][-1:][0])
 
 
 
