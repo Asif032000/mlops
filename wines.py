@@ -66,13 +66,9 @@ X
 
 
 X.info()
-
-
-# In[12]:
-
-
-
-# In[14]:
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X = sc.fit_transform(X)
 
 
 from keras.models import Sequential
@@ -108,7 +104,7 @@ model.summary()
 # In[19]:
 
 
-model.add(Dense(units=8,input_shape=(13,),
+model.add(Dense(units=25,input_shape=(13,),
                 activation='relu',
                 kernel_initializer="he_normal"))
 
@@ -116,10 +112,13 @@ model.add(Dense(units=8,input_shape=(13,),
 # In[20]:
 
 
-model.add(Dense(units=2,input_shape=(13,),                  
+model.add(Dense(units=15,input_shape=(13,),                  
                 activation='relu',
                 kernel_initializer="he_normal"))     # In multiclassification output neurons should be taken = no. of categories of y
 
+model.add(Dense(units=5,input_shape=(13,),                  
+                activation='relu',
+                kernel_initializer="he_normal")) 
 
 # In[21]:
 
