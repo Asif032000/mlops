@@ -180,7 +180,7 @@ model.layers[3].output   # in last layer 2 outputs
 # In[39]:
 
 
-a= model.fit(X,y_cat,epochs = 100)   # weights change again after every epoch , in each epoch the weights are calculated for each feature
+a= model.fit(X,y_cat,epochs = 10)   # weights change again after every epoch , in each epoch the weights are calculated for each feature
 
 
 # In[31]:
