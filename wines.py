@@ -215,10 +215,13 @@ model.save('wineclasspred.h5')
 
 
 accuracy = a.history['accuracy'][-1:][0]
+accuracy = accuracy *100
 import os
-if int(accuracy) > 80:
+if int(accuracy) > 95:
+  print('accuracy is: ',accuracy)
   os.system('curl --user admin:redhat https://c28210e5.ngrok.io/job/job3/build?token=success')
 else:
+  print('accuracy is: ',accuracy)
   os.system('curl --user admin:redhat https://c28210e5.ngrok.io/job/job4/build?token=failure')
 
 
